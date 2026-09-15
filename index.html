@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+  
+  <!-- Makes it run full-screen on iPhone when saved to Home Screen -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="AmeOS">
 
+  <title>AmeOS Web Concept</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="desktop">
+    <!-- AmeOS Header / Status Bar -->
+    <header class="status-bar">
+      <span id="clock">00:00</span>
+      <span class="os-tag">AmeOS</span>
+    </header>
+
+    <!-- AmeOS Widgets -->
+    <main class="content">
+      <div class="widget clock-widget">
+        <h2 id="large-time">00:00</h2>
+        <p>AmeOS 15 Edition</p>
+      </div>
+
+      <!-- App Icons Grid -->
+      <div class="app-grid">
+        <div class="app-icon" onclick="openApp('Settings')">
+          <div class="icon-box">⚙️</div>
+          <span>Settings</span>
+        </div>
+        <div class="app-icon" onclick="openApp('Camera')">
+          <div class="icon-box">📷</div>
+          <span>Camera</span>
+        </div>
+        <div class="app-icon" onclick="openApp('Browser')">
+          <div class="icon-box">🌐</div>
+          <span>Web</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- Simulated App Window -->
+    <div id="app-window" class="hidden">
+      <div class="window-header">
+        <span id="app-title">App</span>
+        <button onclick="closeApp()">✕</button>
+      </div>
+      <div class="window-body" id="app-body">
+        Welcome to AmeOS App!
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
